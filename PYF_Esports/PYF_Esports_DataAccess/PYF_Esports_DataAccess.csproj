@@ -6,4 +6,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Initializer\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="Seeds\" />
+  </ItemGroup>
+
 </Project>
