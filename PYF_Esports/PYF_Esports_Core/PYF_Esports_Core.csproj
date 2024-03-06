@@ -11,4 +11,8 @@
     <Folder Include="ViewModels\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PYF_Esports_Utility\PYF_Esports_Utility.csproj" />
+  </ItemGroup>
+
 </Project>

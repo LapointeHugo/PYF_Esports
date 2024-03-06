@@ -11,4 +11,9 @@
     <Folder Include="Services\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PYF_Esports_Core\PYF_Esports_Core.csproj" />
+    <ProjectReference Include="..\PYF_Esports_DataAccess\PYF_Esports_DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>
