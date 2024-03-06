@@ -5,6 +5,10 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+header {
+  height: 100px;
+}
+
 .container {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -19,6 +23,10 @@ h1 {
 h2 {
   font-size: 32px;
   font-weight: bold;
+}
+
+#bodyContainer {
+  padding: 0px;
 }
 /* End of general */
 
@@ -69,6 +77,57 @@ h2 {
   transform: translateY(2px);
 }
 /* End Buttons */
+
+/* Layout */
+.navbar, .navbar-brand {
+  height: 100px;
+}
+
+#navbarOptions {
+  padding: 0px;
+  height: 100px;
+}
+
+.navbar {
+  margin-right: 50px;
+}
+
+.nav-link {
+  color: white;
+  font-size: 14px;
+  position: relative;
+  transition: all 0.4s;
+}
+
+.nav-link:hover {
+  color: rgb(0, 203, 240);
+  cursor: pointer;
+}
+
+.nav-link::after {
+  content: '';
+  height: 2px;
+  width: 100%;
+  background-color: rgb(0, 203, 240);
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  opacity: 0;
+  transition: all 0.2s;
+  pointer-events: none;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+  opacity: 1;
+}
+
+@media screen and (max-width: 1400px) {
+  header {
+      margin-bottom: 50px;
+    }
+}
+/* End of Layout */
 
 /* Home Page */
 #homeTitle, #homeSubTitle {

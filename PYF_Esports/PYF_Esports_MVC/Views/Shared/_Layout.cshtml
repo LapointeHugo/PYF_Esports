@@ -10,10 +10,46 @@
 </head>
 <body>
     <header>
-    
+        <div id="navbarOptions" class="container">
+            <nav class="navbar navbar-expand-lg navbar-light" s>
+                <!-- Logo -->
+                <a class="navbar-brand">
+                    <img src="/images/Logo.png" alt="PYF_Logo" class="d-inline-block align-top h-logo">
+                </a>
+
+                <!-- Navbar Toggler -->
+                <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar Content -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item mx-3">
+                            <a class="nav-link">HOME</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link">SCHEDULE</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link">BRACKET</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link">TEAMS</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link">STANDINGS</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link">SOCIALS</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
     
-    <div class="container">
+    <div id="bodyContainer" class="container">
         @RenderBody()
     </div>
 
