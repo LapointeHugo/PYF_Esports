@@ -68,9 +68,54 @@ h2 {
   box-shadow: #3c4fe0 0 3px 7px inset;
   transform: translateY(2px);
 }
+/* End Buttons */
+
+/* Home Page */
+#homeTitle, #homeSubTitle {
+  margin-bottom: 20px;
+}
+
+#textHome {
+  font-size: 14px; 
+  margin-bottom: 40px;
+}
 
 .buttonTitle {
   font-size: 16px;
   font-weight: bold;
 }
-/* End Buttons */
+
+@media screen and (max-width: 768px) {
+  #homeImage1 {
+    width: 75%;
+    height: 75%;
+  }
+
+  #mainContainerLeft {
+    margin-bottom: 40px;
+  }
+
+  h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  #textHome {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  #hiddenText {
+    display: none;
+  }
+
+  .buttonTitle {
+    font-size: 14px;
+  }
+}
+
