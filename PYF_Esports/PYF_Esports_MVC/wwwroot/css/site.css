@@ -83,12 +83,16 @@ h2 {
   height: 100px;
 }
 
+.navbar {
+  background-color: rgb(5, 10, 48);
+}
+
 #navbarOptions {
   padding: 0px;
   height: 100px;
 }
 
-.navbar {
+.navbar-toggler, .navbar-collapse {
   margin-right: 50px;
 }
 
@@ -117,14 +121,71 @@ h2 {
   pointer-events: none;
 }
 
+.navbar .navbar-toggler[aria-expanded="true"] {
+  color: rgb(0, 203, 240)!important;
+}
+
+.navbar .navbar-toggler:focus{
+  color: rgb(5, 10, 48);
+}
+
+.custom-toggler.navbar-toggler {
+  border: 2px solid rgb(29, 35, 78);
+}
+
+.icon {
+  color: white;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.icon:hover {
+  color: rgb(0, 203, 240);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  #socials {
+    display: none;
+  }
+}
+
 .nav-link:hover::after,
 .nav-link:focus::after {
   opacity: 1;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1399px) {
   header {
-      margin-bottom: 50px;
+    margin-bottom: 50px;
+  } 
+}
+
+@media screen and (max-width: 991px) {
+  .navbar-collapse {
+      background-color: rgb(5, 10, 48);
+      border-bottom: rgb(29, 35, 78);
+    }
+
+    .navbar-nav {
+      margin-top: 20px;
+    }
+
+    .nav-link {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .nav-link:hover {
+      color: #00CBF0;
+    }
+
+    .navbar {
+      height: 108px;
+    }
+
+    .navbar-collapse {
+      margin-right: 0px;
     }
 }
 /* End of Layout */
@@ -144,6 +205,20 @@ h2 {
   font-weight: bold;
 }
 
+@media screen and (max-width: 1399px) {
+  h1 {
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  #textHome {
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 768px) {
   #homeImage1 {
     width: 75%;
@@ -156,17 +231,14 @@ h2 {
 
   h1 {
     font-size: 36px;
-    text-align: center;
   }
 
   h2 {
     font-size: 24px;
-    text-align: center;
   }
 
   #textHome {
     font-size: 12px;
-    text-align: center;
   }
 
   #hiddenText {
