@@ -12,6 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\PYF_Esports_Core\PYF_Esports_Core.csproj" />
     <ProjectReference Include="..\PYF_Esports_DataAccess\PYF_Esports_DataAccess.csproj" />
   </ItemGroup>
