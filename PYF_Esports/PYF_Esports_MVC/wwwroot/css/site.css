@@ -11,7 +11,7 @@ header {
 
 footer {
   padding-top: 80px;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   text-align: center;
 }
 
@@ -147,6 +147,37 @@ h2 {
 
 .icon:hover {
   color: rgb(0, 203, 240);
+  transition: color 0.5s ease;
+  cursor: pointer;
+}
+
+.fa-circle {
+  color: rgb(29, 35, 78);
+}
+
+.iconFooter {
+  transition: 500ms linear;
+  padding-top: 33px;
+  padding-bottom: 33px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.iconFooter:hover {
+  color: rgb(0, 203, 240);
+  transition: color 0.5s ease;
+  cursor: pointer;
+
+  transform: scale(1.1);
+}
+
+.texteFooter {
+  color: white;
+}
+
+.texteFooter:hover {
+  color: rgb(0, 203, 240);
+  transition: color 0.5s ease;
   cursor: pointer;
 }
 
