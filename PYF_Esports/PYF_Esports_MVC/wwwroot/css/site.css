@@ -161,6 +161,8 @@ h2 {
   padding-bottom: 33px;
   padding-left: 20px;
   padding-right: 20px;
+  margin-left: 24px;
+  margin-right: 24px;
 }
 
 .iconFooter:hover {
@@ -198,6 +200,12 @@ h2 {
   } 
 }
 
+@media screen and (max-width: 1200px) {
+  #siteLinksFooter {
+    font-size: 12px;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .navbar-collapse {
       background-color: rgb(5, 10, 48);
@@ -224,22 +232,39 @@ h2 {
     .navbar-collapse {
       margin-right: 0px;
     }
+
+    #siteLinksFooter {
+      display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      .iconFooter {
+        margin: 0px;
+      }
+    }
 }
 /* End of Layout */
 
 /* Home Page */
 #homeTitle, #homeSubTitle {
+  transition: 500ms linear;
   margin-bottom: 20px;
 }
 
 #textHome {
+  transition: 500ms linear;
   font-size: 14px; 
   margin-bottom: 40px;
 }
 
 .buttonTitle {
+  transition: 500ms linear;
   font-size: 16px;
   font-weight: bold;
+}
+
+.homeButton {
+  transition: 500ms linear;
 }
 
 @media screen and (max-width: 1399px) {
@@ -256,7 +281,7 @@ h2 {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   #homeImage1 {
     width: 75%;
     height: 75%;
