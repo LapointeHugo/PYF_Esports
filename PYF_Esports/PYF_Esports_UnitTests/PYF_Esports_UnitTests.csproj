@@ -22,4 +22,12 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PYF_Esports_Core\PYF_Esports_Core.csproj" />
+    <ProjectReference Include="..\PYF_Esports_DataAccess\PYF_Esports_DataAccess.csproj" />
+    <ProjectReference Include="..\PYF_Esports_MVC\PYF_Esports_MVC.csproj" />
+    <ProjectReference Include="..\PYF_Esports_Services\PYF_Esports_Services.csproj" />
+    <ProjectReference Include="..\PYF_Esports_Utility\PYF_Esports_Utility.csproj" />
+  </ItemGroup>
+
 </Project>
