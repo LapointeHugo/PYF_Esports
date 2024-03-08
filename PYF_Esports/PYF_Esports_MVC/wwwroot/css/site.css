@@ -7,17 +7,13 @@ body {
 
 header {
   height: 100px;
+  margin-bottom: 0px;
 }
 
 footer {
   padding-top: 80px;
   padding-bottom: 40px;
   text-align: center;
-}
-
-.container {
-  padding-top: 40px;
-  padding-bottom: 40px;
 }
 
 h1 {
@@ -32,7 +28,7 @@ h2 {
 }
 
 #bodyContainer {
-  padding: 0px;
+  padding-top: 40px;
 }
 /* End of general */
 
@@ -406,4 +402,68 @@ h2 {
     font-size: 14px;
   }
 }
+
+/* Schedule page */
+#matchSchedule {
+  background-color: rgb(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 125px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#date {
+  font-size: 32x;
+  font-weight: bold;
+}
+
+.infoSchedule {
+  font-size: 16px;
+  transition: 500ms linear;
+}
+
+#vs {
+  margin-bottom: 0px;
+  color: #00CBF0;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  transition: 500ms linear;
+}
+
+.teamScheduleName {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 500ms linear;
+}
+
+@media screen and (max-width: 1200px) {
+  .infoSchedule {
+    font-size: 12px;
+  }
+
+  .teamScheduleName {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  #vs {
+    margin-bottom: 0px;
+    color: #00CBF0;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .teamScheduleName {
+    display: none;
+  }
+}
+/* End of Schedule page */
 
