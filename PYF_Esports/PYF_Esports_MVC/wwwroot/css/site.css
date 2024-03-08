@@ -440,6 +440,15 @@ h2 {
   transition: 500ms linear;
 }
 
+.teamScheduleName:hover {
+  color: #00CBF0;
+  cursor: pointer;
+}
+
+.logoTeams:hover {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1200px) {
   .infoSchedule {
     font-size: 12px;

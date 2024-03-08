@@ -9,5 +9,10 @@ namespace PYF_Esports_MVC.Areas.Users.Controllers
         {
             return View();
         }
+
+        public IActionResult Teams()
+        {
+            return View();
+        }
     }
 }
