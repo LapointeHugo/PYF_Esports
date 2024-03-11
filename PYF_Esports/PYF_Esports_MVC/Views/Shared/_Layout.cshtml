@@ -72,7 +72,7 @@
 							<a class="nav-link" style="color: white" asp-area="Users" asp-controller="Users" asp-action="Schedule">SCHEDULE</a>
 						</li>
 						<li class="nav-item mx-3">
-							<a class="nav-link" style="color: white">BRACKET</a>
+							<a class="nav-link" style="color: white" asp-area="Users" asp-controller="Users" asp-action="Bracket">BRACKET</a>
 						</li>
 						<li class="nav-item mx-3">
 							<a class="nav-link" style="color: white" asp-area="Users" asp-controller="Users" asp-action="Teams">TEAMS</a>
@@ -81,9 +81,9 @@
 							<a class="nav-link" style="color: white">STANDINGS</a>
 						</li>
 						<li id="socials" class="nav-item mx-3 align-self-center">
-							<i class="fa-brands fa-x-twitter fa-lg icon d-none d-lg-inline-block"></i>
-							<i class="fa-brands fa-discord fa-lg icon d-none d-lg-inline-block"></i>
-							<i class="fa-brands fa-twitch fa-lg icon d-none d-lg-inline-block"></i>
+							<a href="https://twitter.com/PYFesports" target="_blank"><i class="fa-brands fa-x-twitter fa-lg icon d-none d-lg-inline-block"></i></a>
+							<i class="fa-brands fa-youtube fa-lg icon d-none d-lg-inline-block"></i>
+							<a href="https://www.twitch.tv/pyfesports" target="_blank"><i class="fa-brands fa-twitch fa-lg icon d-none d-lg-inline-block"></i></a>
 						</li>
 						<li class="nav-item mx-3 d-lg-none bottom">
 							<a class="nav-link d-lg-none" style="color: white">SOCIALS</a>
@@ -108,20 +108,20 @@
 
 	<footer>
 		<div>
-			<i class="fa-brands fa-x-twitter fa-2xl iconFooter"></i>
+			<a href="https://twitter.com/PYFesports" target="_blank"><i class="fa-brands fa-x-twitter fa-2xl iconFooter"></i></a>
 			<i class="fa-solid fa-circle"></i>
-			<i class="fa-brands fa-discord fa-2xl iconFooter"></i>
+			<a href="https://www.instagram.com/phoqueyourfeelings?igsh=eDlnOTZ1ZjU0bm8%3D&utm_source=qr" target="_blank"><i class="fa-brands fa-instagram fa-2xl iconFooter"></i></a>
 			<i class="fa-solid fa-circle"></i>
-			<i class="fa-brands fa-twitch fa-2xl iconFooter"></i>
+			<a href="https://www.twitch.tv/pyfesports" target="_blank"><i class="fa-brands fa-twitch fa-2xl iconFooter"></i></a>
 			<i class="fa-solid fa-circle"></i>
-			<i class="fa-brands fa-instagram fa-2xl iconFooter"></i>
+			<a href=""><i class="fa-brands fa-youtube fa-2xl iconFooter"></i></a>
 		</div>
 		<div id="siteLinksFooter" class="row justify-content-center" style="margin-top: 30px">
-			<p class="col-1 texteFooter">Home</p>
-			<p class="col-1 texteFooter">Schedule</p>
-			<p class="col-1 texteFooter">Bracket</p>
-			<p class="col-1 texteFooter">Teams</p>
-			<p class="col-1 texteFooter">About us</p>
+			<a class="col-1 texteFooter" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+			<a class="col-1 texteFooter" asp-area="Users" asp-controller="Users" asp-action="Schedule">Schedule</a>
+			<a class="col-1 texteFooter" asp-area="Users" asp-controller="Users" asp-action="Bracket">Bracket</a>
+			<a class="col-1 texteFooter" asp-area="Users" asp-controller="Users" asp-action="Teams">Teams</a>
+			<a class="col-1 texteFooter">About us</a>
 		</div>
 		<p style="font-size: 14px; margin-top: 30px">Copyright &#64;2024 Designed by <a style="color: rgb(255, 255, 255, 0.5)">PYF ESPORTS</a></p>
 	</footer>
