@@ -585,3 +585,58 @@ a {
 }
 /* End of teams page */
 
+/* Bracket page */
+#bracketText {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  border-collapse:  collapse;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 500ms linear;
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: center;
+  padding: 8px;
+}
+
+th {
+  background-color: rgb(0, 0, 0, 0.30);
+}
+
+td {
+  background-color: rgb(255, 255, 255, 0.05);
+}
+
+.imgBracket {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 1399px) {
+  .imgBracket {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  #bracketText {
+    display: none;
+  }
+
+  .imgBracket {
+    display: none;
+  }
+
+  table {
+    width: 100%;
+  }
+}
+/* End of bracket age */
