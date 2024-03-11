@@ -29,6 +29,8 @@ h2 {
 
 #bodyContainer {
   padding-top: 40px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 /* End of general */
 
@@ -238,6 +240,13 @@ h2 {
         margin: 0px;
       }
     }
+}
+
+@font-face {
+  font-family: 'unicons';
+  src: url('unicons.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @-webkit-keyframes border-transform {
@@ -475,4 +484,99 @@ h2 {
   }
 }
 /* End of Schedule page */
+
+/* Teams page */
+#titleTeams {
+  margin-bottom: 30px;
+}
+
+.teamName {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0px;
+  text-align: left;
+  padding-left: 0px;
+}
+
+.drop {
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .teamName {
+    padding-left: 40px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .teamName {
+    font-size: 20px
+  }
+}
+
+.collapsible {
+  transition: 250ms linear;
+  background-color: rgb(255, 255, 255, 0.05);
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  height: 125px;
+  padding-right: 30px;
+}
+
+.active, .collapsible:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: rgb(255, 255, 255, 0.05);
+}
+
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character fors "minus" sign (-) */
+}
+
+.roster {
+  transition: 250ms linear;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.roster:hover {
+  color: #00CBF0;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  .roster {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .roster {
+    text-align: left;
+  }
+}
+/* End of teams page */
 
