@@ -77,8 +77,12 @@
 						<li class="nav-item mx-3">
 							<a class="nav-link" style="color: white" asp-area="Users" asp-controller="Users" asp-action="Teams">TEAMS</a>
 						</li>
-						<li class="nav-item mx-3">
-							<a class="nav-link" style="color: white">STANDINGS</a>
+						<li class="nav-item mx-3 dropdown">
+							<a class="nav-link" href="#" id="navbarDropdown"  data-bs-toggle="dropdown" aria-expanded="false" style="color: white">STANDINGS</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<li><a class="dropdown-item" href="#">TEAMS</a></li>
+								<li><a class="dropdown-item" href="#">PLAYERS</a></li>
+							</ul>
 						</li>
 						<li id="socials" class="nav-item mx-3 align-self-center">
 							<a href="https://twitter.com/PYFesports" target="_blank"><i class="fa-brands fa-x-twitter fa-lg icon d-none d-lg-inline-block"></i></a>

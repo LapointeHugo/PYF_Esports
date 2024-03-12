@@ -502,6 +502,12 @@ a {
   margin-bottom: 0px;
   text-align: left;
   padding-left: 0px;
+  transition: 250ms linear;
+}
+
+.teamName:hover {
+  color: #00CBF0;
+  cursor: pointer;
 }
 
 .drop {
@@ -668,4 +674,22 @@ td {
   margin-right: 10px;
 }
 
+.teamNameBracket {
+  text-align: start;
+  transition: 250ms linear;
+}
+
+.teamNameBracket:hover {
+  color: #00CBF0;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  background-color: rgb(5, 10, 48);
+  border: 1px solid white;
+}
+
+.dropdown-item {
+  color: white;
+}
 /* End of bracket age */
