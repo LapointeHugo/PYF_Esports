@@ -697,10 +697,8 @@ td {
 /* Players standings */
 #tableStandingsPlayers {
   width: 100%;
-  position: relative;
-  border-collapse: collapse;
   line-height: 1.25;
-  overflow-x: scroll;
+  border-collapse: collapse;
 }
 
 #stickyRank {
@@ -722,9 +720,89 @@ td {
   border-bottom: 1px solid black;
 }
 
+#stickyPlayer:hover {
+  color:rgb(0, 203, 240);
+  cursor: pointer;
+  transition: 250ms linear;
+}
+
 #legend {
-  border: 1px solid white;
-  border-radius: 20px;
   margin-bottom: 30px;
+}
+
+#omen {
+  /*display: block;
+  margin-left: auto;
+  margin-right: auto;*/
+}
+
+@media screen and (max-width: 991px) {
+  #omen {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #legendText {
+    padding-left: 40px;
+  }
+}
+
+.podium {
+  display: flex;
+  align-items: flex-end;
+}
+
+.podium__item {
+  width: 200px;
+}
+
+.podium__rank {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  color: #fff;
+}
+
+.podium__city {
+  text-align: center;
+  padding: 0 .5rem;
+  font-weight: bold;
+}
+
+.podium__number {
+  width: 27px;
+  height: 75px;
+}
+
+.podium .first {
+  min-height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid black;
+}
+
+.podium .second {
+  min-height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid black;
+}
+
+.podium .third {
+  min-height: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid black;
+}
+
+.first {
+  color: #FFD700;
+}
+
+.second {
+  color: #C0C0C0;
+}
+
+.third {
+  color: #CD7F32;
 }
 /* End of Players standing*/
