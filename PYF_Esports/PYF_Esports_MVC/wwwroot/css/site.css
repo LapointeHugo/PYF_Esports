@@ -27,6 +27,10 @@ h2 {
   font-weight: bold;
 }
 
+a {
+  color: inherit;
+}
+
 #bodyContainer {
   padding-top: 40px;
   padding-left: 0px;
@@ -173,6 +177,7 @@ h2 {
 
 .texteFooter {
   color: white;
+  text-decoration: none;
 }
 
 .texteFooter:hover {
@@ -497,6 +502,12 @@ h2 {
   margin-bottom: 0px;
   text-align: left;
   padding-left: 0px;
+  transition: 250ms linear;
+}
+
+.teamName:hover {
+  color: #00CBF0;
+  cursor: pointer;
 }
 
 .drop {
@@ -580,3 +591,213 @@ h2 {
 }
 /* End of teams page */
 
+/* Bracket page */
+#bracketText {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#winLose {
+  border-collapse:  collapse;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 500ms linear;
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: center;
+  padding: 8px;
+}
+
+th {
+  background-color: #030821;
+}
+
+td {
+  background-color: #12173a;
+}
+
+.imgBracket {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 1399px) {
+  .imgBracket {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  #bracketText {
+    display: none;
+  }
+
+  .imgBracket {
+    display: none;
+  }
+
+  #winLose {
+    width: 100%;
+  }
+}
+
+.roundsBackground{
+  background-color: rgb(255, 255, 255, 0.05);
+  border: 1px solid black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.scoreBracket {
+  background-color: rgb(0, 0, 0, 0.30);
+}
+
+.rounds {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.bracketMatch {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.nameTeamsBracket {
+  margin-bottom: 0px;
+  margin-right: 10px;
+}
+
+.teamNameBracket {
+  text-align: start;
+  transition: 250ms linear;
+}
+
+.teamNameBracket:hover {
+  color: #00CBF0;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  background-color: rgb(5, 10, 48);
+  border: 1px solid white;
+}
+
+.dropdown-item {
+  color: white;
+}
+/* End of bracket page */
+
+/* Players standings */
+#tableStandingsPlayers {
+  width: 100%;
+  line-height: 1.25;
+  border-collapse: collapse;
+}
+
+#stickyRank {
+  position: sticky;
+  left: 0;
+  text-align: center;
+  width: 35px;
+  min-width: 35px;
+  border: none;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#stickyPlayer {
+  position: sticky;
+  left: 35px;
+  border: none;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#stickyPlayer:hover {
+  color:rgb(0, 203, 240);
+  cursor: pointer;
+  transition: 250ms linear;
+}
+
+#legend {
+  margin-bottom: 50px;
+}
+
+#omen {
+  /*display: block;
+  margin-left: auto;
+  margin-right: auto;*/
+}
+
+@media screen and (max-width: 991px) {
+  #omen {
+    display: none;
+  }
+}
+
+.podium {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.podium__item {
+  width: 200px;
+}
+
+.podium__rank {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  color: #fff;
+}
+
+.podium__city {
+  text-align: center;
+  padding: 0 .5rem;
+  font-weight: bold;
+}
+
+.podium__number {
+  width: 27px;
+  height: 75px;
+}
+
+.podium .first {
+  min-height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid black;
+}
+
+.podium .second {
+  min-height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid black;
+}
+
+.podium .third {
+  min-height: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid black;
+}
+
+.first {
+  color: #FFD700;
+}
+
+.second {
+  color: #C0C0C0;
+}
+
+.third {
+  color: #CD7F32;
+}
+/* End of Players standing*/

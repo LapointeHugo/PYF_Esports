@@ -10,7 +10,22 @@ namespace PYF_Esports_MVC.Areas.Users.Controllers
             return View();
         }
 
+        public IActionResult Bracket() 
+        {
+            return View();
+        }
+
         public IActionResult Teams()
+        {
+            return View();
+        }
+
+        public IActionResult StandingsPlayers()
+        {
+            return View();
+        }
+
+        public IActionResult StandingsTeams()
         {
             return View();
         }
