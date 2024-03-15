@@ -727,7 +727,7 @@ td {
 }
 
 #legend {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 #omen {
@@ -742,15 +742,10 @@ td {
   }
 }
 
-@media screen and (max-width: 575px) {
-  #legendText {
-    padding-left: 40px;
-  }
-}
-
 .podium {
   display: flex;
   align-items: flex-end;
+  justify-content: center;
 }
 
 .podium__item {

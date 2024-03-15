@@ -1,21 +1,10 @@
 ﻿<h1 style="margin-bottom: 50px;">Standings Players</h1>
 
-<div id="legend" class="row justify-content-between align-items-center">
-    <div id="legendText" class="col-12 col-lg-4">
-        <p><a style="color: #00CBF0">R</a>: Rating</p>
-        <p><a style="color: #00CBF0">ACS</a>: Average Combat Score</p>
-        <p><a style="color: #00CBF0">K</a>: Kills</p>
-        <p><a style="color: #00CBF0">D</a>: Deaths</p>
-        <p><a style="color: #00CBF0">A</a>: Assists</p>
-        <p><a style="color: #00CBF0">+/-</a>: Kills - Deaths</p>
-        <p><a style="color: #00CBF0">KAST</a>: Kill, Assist, Trade, Survive %</p>
-        <p><a style="color: #00CBF0">ADR</a>: Average Damage per Round</p>
-        <p><a style="color: #00CBF0">HS%</a>: Headshot %</p>
-        <p><a style="color: #00CBF0">FK</a>: First Kills</p>
-        <p><a style="color: #00CBF0">FD</a>: First Deaths</p>
-        <p><a style="color: #00CBF0">+/-</a>: FK - FD</p>
+<div id="legend" class="row justify-content-between align-items-center" style="text-align: center">
+    <div class="col-2">
+        <img id="omen" src="/images/Omen.webp" height="200px" width="200px">
     </div>
-    <div class="col-6">
+    <div class="col-12 col-lg-6">
         <div class="container podium">
             <div class="podium__item">
                 <p class="podium__city">zekken</p>
@@ -23,7 +12,7 @@
             </div>
             <div class="podium__item">
                 <p class="podium__city">TenZ</p>
-                <div class="podium__rank first">
+                <div class="podium__rank first" s>
                     1
                 </div>
             </div>
@@ -35,7 +24,7 @@
         
     </div>
     <div class="col-2">
-        <img id="omen" src="/images/Omen.webp" height="150px" width="150px">
+        <img id="omen" src="/images/Omen.webp" height="200px" width="200px">
     </div>
 </div>
 
@@ -46,18 +35,18 @@
                 <th id="stickyRank">#</th>
                 <th id="stickyPlayer">PLAYER</th>
                 <th>TEAM</th>
-                <th>R</th>
-                <th>ACS</th>
-                <th>K</th>
-                <th>D</th>
-                <th>A</th>
-                <th>+/-</th>
-                <th>KAST</th>
-                <th>ADR</th>
-                <th>HS%</th>
-                <th>FK</th>
-                <th>FD</th>
-                <th>+/-</th>
+                <th data-toggle="tooltip" data-placement="top" title="Rating">R</th>
+                <th data-toggle="tooltip" data-placement="top" title="Average Combat Score">ACS</th>
+                <th data-toggle="tooltip" data-placement="top" title="Kills">K</th>
+                <th data-toggle="tooltip" data-placement="top" title="Deaths">D</th>
+                <th data-toggle="tooltip" data-placement="top" title="Assists">A</th>
+                <th data-toggle="tooltip" data-placement="top" title="Kills - Deaths">+/-</th>
+                <th data-toggle="tooltip" data-placement="top" title="Kill, Assist, Trade, Survive %">KAST</th>
+                <th data-toggle="tooltip" data-placement="top" title="Average Damage per Round">ADR</th>
+                <th data-toggle="tooltip" data-placement="top" title="Headshot %">HS%</th>
+                <th data-toggle="tooltip" data-placement="top" title="First Kills">FK</th>
+                <th data-toggle="tooltip" data-placement="top" title="First Deaths">FD</th>
+                <th data-toggle="tooltip" data-placement="top" title="FK - FD">+/-</th>
             <tr>
             <tr>
                 <td id="stickyRank">1</td>
@@ -283,3 +272,9 @@
         </thead>
     </table>
 </div>
+
+<script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
