@@ -9,20 +9,20 @@ require_once __DIR__ . '/router.php';
 // Static routes
 
 // Home
-get('/', 'views/home.php');
-get('/home', 'views/home.php');
+get('/', 'controllers/layout.php');
+get('/home', 'controllers/layout.php');
 
 // Schedule
-get('/schedule', 'views/schedule.php');
+get('/schedule', 'controllers/layout.php');
 
 // Admin connection
-get('/auth', 'views/auth.php');
+get('/auth', 'controllers/layout.php');
 
 // Admin control panel
-get('/admin', 'views/admin.php');
+get('/admin', 'controllers/layout.php');
 
 // Bracket
-get('/bracket', 'views/bracket.php');
+get('/bracket', 'controllers/layout.php');
 
 
 
