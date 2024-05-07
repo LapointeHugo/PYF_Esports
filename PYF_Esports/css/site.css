@@ -400,11 +400,6 @@ a {
   transition: 500ms linear;
 }
 
-.iframetwitch {
-  border: 5px solid rgb(29, 35, 78);
-  border-radius: 20px;
-}
-
 @media screen and (max-width: 1399px) {
   h1 {
     text-align: center;
@@ -900,7 +895,7 @@ input:focus~label,
 input:valid~label {
   top: -20px;
   font-size: 14px;
-  color: #5264AE;
+  color: white;
 }
 
 /* BOTTOM BARS ================================= */
