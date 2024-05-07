@@ -1,4 +1,4 @@
--- Active: 1715053854725@@cocktailwizardbd.mysql.database.azure.com@3306@pyf_esports
+
 
 DROP TABLE IF EXISTS Account CASCADE;
 DROP TABLE IF EXISTS EventPlayer CASCADE;
