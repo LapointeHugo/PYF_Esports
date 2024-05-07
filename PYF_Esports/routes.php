@@ -31,7 +31,6 @@ get('/team', 'controllers/layout.php');
 get('/players', 'controllers/layout.php');
 
 
-
 // Dynamic routes
 
 // Admin connection

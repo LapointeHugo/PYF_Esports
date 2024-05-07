@@ -400,6 +400,11 @@ a {
   transition: 500ms linear;
 }
 
+.iframetwitch {
+  border: 5px solid rgb(29, 35, 78);
+  border-radius: 20px;
+}
+
 @media screen and (max-width: 1399px) {
   h1 {
     text-align: center;
@@ -442,6 +447,10 @@ a {
 
   .buttonTitle {
     font-size: 14px;
+  }
+
+  .upco {
+    display: none;
   }
 }
 

@@ -13,13 +13,13 @@
             <input type="text" required>
             <span class="highlight"></span>
             <span class="bar"></span>
-            <label>Name</label>
+            <label>Username</label>
         </div>
         <div class="group">
             <input type="text" required>
             <span class="highlight"></span>
             <span class="bar"></span>
-            <label>Email</label>
+            <label>Password</label>
         </div>
     </div>
 </div>
