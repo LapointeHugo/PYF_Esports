@@ -22,6 +22,13 @@
         </div>
     </div>
     <div class="col-12 col-xxl-6" style="text-align: center">
-        <img id="homeImage1" src="/../images/HomeImage.png">
+        <iframe
+            src="https://player.twitch.tv/?channel=pyfesports&parent=localhost"
+            height="500"
+            width="800"
+            frameborder="0"
+            scrolling="no"
+            allowfullscreen="true">
+        </iframe>
     </div>
 </div>
