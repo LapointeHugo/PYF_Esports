@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PYF_Esports_MVC", "PYF_Esports_MVC\PYF_Esports_MVC.csproj", "{BE52D82C-E95B-43AC-B7D7-E80FD88177C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PYF_Esports_MVC", "PYF_Esports_MVC\PYF_Esports_MVC.csproj", "{BE52D82C-E95B-43AC-B7D7-E80FD88177C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PYF_Esports_Core", "PYF_Esports_Core\PYF_Esports_Core.csproj", "{4F302A6F-236B-48B2-BF0E-2A4D57EEA336}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PYF_Esports_Core", "PYF_Esports_Core\PYF_Esports_Core.csproj", "{4F302A6F-236B-48B2-BF0E-2A4D57EEA336}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PYF_Esports_DataAccess", "PYF_Esports_DataAccess\PYF_Esports_DataAccess.csproj", "{BECF21AF-0E12-4C35-9982-72261CF8F26C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PYF_Esports_DataAccess", "PYF_Esports_DataAccess\PYF_Esports_DataAccess.csproj", "{BECF21AF-0E12-4C35-9982-72261CF8F26C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PYF_Esports_Services", "PYF_Esports_Services\PYF_Esports_Services.csproj", "{918D1ED5-EFF3-477E-A91C-5AAAB16621D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PYF_Esports_Services", "PYF_Esports_Services\PYF_Esports_Services.csproj", "{918D1ED5-EFF3-477E-A91C-5AAAB16621D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PYF_Esports_UnitTests", "PYF_Esports_UnitTests\PYF_Esports_UnitTests.csproj", "{BA9AB00A-39F5-4C6C-A318-11A2C274C292}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PYF_Esports_UnitTests", "PYF_Esports_UnitTests\PYF_Esports_UnitTests.csproj", "{BA9AB00A-39F5-4C6C-A318-11A2C274C292}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PYF_Esports_Utility", "PYF_Esports_Utility\PYF_Esports_Utility.csproj", "{8E80D214-6546-4A34-AD78-984FD61ECC6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PYF_Esports_Utility", "PYF_Esports_Utility\PYF_Esports_Utility.csproj", "{8E80D214-6546-4A34-AD78-984FD61ECC6D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
