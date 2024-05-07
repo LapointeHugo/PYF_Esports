@@ -16,7 +16,7 @@
             </div>
             <div class="col-7 d-flex flex-column justify-content-center align-items-center homeButton">
                 <iframe
-                    src="https://player.twitch.tv/?channel=pyfesports&parent=localhost"
+                    src="https://player.twitch.tv/?channel=pyfesports&parent=pyfesports.com"
                     height="200"
                     width="375"
                     frameborder="0"
