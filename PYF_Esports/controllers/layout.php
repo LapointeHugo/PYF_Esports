@@ -78,7 +78,7 @@
 							<a class="nav-link" style="color: white" href="/bracket">BRACKET</a>
 						</li>
 						<li class="nav-item mx-3">
-							<a class="nav-link" style="color: white" href="/teams">TEAMS</a>
+							<a class="nav-link" style="color: white" href="/team">TEAMS</a>
 						</li>
 						<li class="nav-item mx-3 dropdown">
 							<a class="nav-link" href="#" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="color: white">STANDINGS</a>
@@ -116,7 +116,7 @@
 		} else if ($route == "/players") {
 			include_once __DIR__ . "/../views/standingsPlayers.php";
 		} else if ($route == "/team") {
-			include_once __DIR__ . "/../views/team.php";
+			include_once __DIR__ . "/../views/teams.php";
 		} else {
 			include_once __DIR__ . "/../views/home.php";
 		}

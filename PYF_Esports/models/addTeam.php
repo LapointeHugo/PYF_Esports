@@ -44,7 +44,7 @@ $DB = connectToDatabase();
 $DB->begin_transaction();
 
 // Add the team
-try{
+try {
     $query = $DB->prepare('CALL addTeam(?, ?)');
     $query->bind_param('ss', $teamName, $teamLogo);
     $query->execute();
@@ -63,4 +63,6 @@ try{
         $query->execute();
         $query->close();
     }
+} catch (Exception $e) {
+    $errors[] = $e->getMessage();
 }
