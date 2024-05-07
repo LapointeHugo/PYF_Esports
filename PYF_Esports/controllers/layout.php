@@ -157,8 +157,8 @@
 	<script src="https://kit.fontawesome.com/63463ff979.js" crossorigin="anonymous"></script>
 	<script src="/../lib/jquery-validation/dist/jquery.validate.js"></script>
 	<script src="/../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
-	<script src="/../js/site.js"></script>
-	<script src="/../js/main.js"></script>
+	<!-- <script src="/../js/site.js"></script>
+	<script src="/../js/main.js"></script> -->
 
 </body>
 
