@@ -33,4 +33,8 @@
     <ProjectReference Include="..\PYF_Esports_Utility\PYF_Esports_Utility.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Views\Admins\" />
+  </ItemGroup>
+
 </Project>
