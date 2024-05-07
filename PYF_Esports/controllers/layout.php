@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,45 +9,48 @@
 	<link rel="stylesheet" href="/../css/site.css" />
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script>
-			$(document).ready(function() {
-				var progressPath = document.querySelector('.progress-wrap path');
-				var pathLength = progressPath.getTotalLength();
+		$(document).ready(function() {
+			var progressPath = document.querySelector('.progress-wrap path');
+			var pathLength = progressPath.getTotalLength();
 
-				progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
-				progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
-				progressPath.style.strokeDashoffset = pathLength;
-				progressPath.getBoundingClientRect();
-				progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+			progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+			progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+			progressPath.style.strokeDashoffset = pathLength;
+			progressPath.getBoundingClientRect();
+			progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
 
-				var updateProgress = function() {
-					var scroll = $(window).scrollTop();
-					var height = $(document).height() - $(window).height();
-					var progress = pathLength - (scroll * pathLength / height);
-					progressPath.style.strokeDashoffset = progress;
+			var updateProgress = function() {
+				var scroll = $(window).scrollTop();
+				var height = $(document).height() - $(window).height();
+				var progress = pathLength - (scroll * pathLength / height);
+				progressPath.style.strokeDashoffset = progress;
+			}
+
+			updateProgress();
+			$(window).scroll(updateProgress);
+
+			var offset = 50;
+			var duration = 550;
+
+			jQuery(window).on('scroll', function() {
+				if (jQuery(this).scrollTop() > offset) {
+					jQuery('.progress-wrap').addClass('active-progress');
+				} else {
+					jQuery('.progress-wrap').removeClass('active-progress');
 				}
-
-				updateProgress();
-				$(window).scroll(updateProgress);
-
-				var offset = 50;
-				var duration = 550;
-
-				jQuery(window).on('scroll', function() {
-					if(jQuery(this).scrollTop() > offset) {
-						jQuery('.progress-wrap').addClass('active-progress');
-					} else {
-						jQuery('.progress-wrap').removeClass('active-progress');
-					}
-				});
-
-				jQuery('.progress-wrap').on('click', function(event) {
-					event.preventDefault();
-					jQuery('html, body').animate({scrollTop: 0}, duration);
-					return false;
-				})
 			});
-		</script>
+
+			jQuery('.progress-wrap').on('click', function(event) {
+				event.preventDefault();
+				jQuery('html, body').animate({
+					scrollTop: 0
+				}, duration);
+				return false;
+			})
+		});
+	</script>
 </head>
+
 <body>
 	<header>
 		<div id="navbarOptions" class="container">
@@ -74,13 +78,13 @@
 							<a class="nav-link" style="color: white" href="/bracket">BRACKET</a>
 						</li>
 						<li class="nav-item mx-3">
-							<a class="nav-link" style="color: white" href="/team">TEAMS</a>
+							<a class="nav-link" style="color: white" href="/teams">TEAMS</a>
 						</li>
 						<li class="nav-item mx-3 dropdown">
-							<a class="nav-link" href="#" id="navbarDropdown"  data-bs-toggle="dropdown" aria-expanded="false" style="color: white">STANDINGS</a>
+							<a class="nav-link" href="#" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="color: white">STANDINGS</a>
 							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 								<li><a class="dropdown-item" href="/teams">TEAMS</a></li>
-								<li><a class="dropdown-item" href="/player">PLAYERS</a></li>
+								<li><a class="dropdown-item" href="/players">PLAYERS</a></li>
 							</ul>
 						</li>
 						<li id="socials" class="nav-item mx-3 align-self-center">
@@ -98,17 +102,25 @@
 	</header>
 
 	<div id="bodyContainer" class="container">
-            <?php
-            if($route == "/schedule"){
-                include_once __DIR__ . "/../Views/schedule.php";
-            } else if($route == "/auth"){
-                include_once __DIR__ . "/Views/auth.php";
-            } else if($route == "/admin"){
-                include_once __DIR__ . "/Views/admin.php";
-            } else if($route == "/bracket"){
-                include_once __DIR__ . "/Views/bracket.php";
-            } else
-            ?>
+		<?php
+		if ($route == "/schedule") {
+			include_once __DIR__ . "/../Views/schedule.php";
+		} else if ($route == "/auth") {
+			include_once __DIR__ . "/../views/auth.php";
+		} else if ($route == "/admin") {
+			include_once __DIR__ . "/../views/admin.php";
+		} else if ($route == "/bracket") {
+			include_once __DIR__ . "/../views/bracket.php";
+		} else if ($route == "/teams") {
+			include_once __DIR__ . "/../views/standingsTeams.php";
+		} else if ($route == "/players") {
+			include_once __DIR__ . "/../views/standingsPlayers.php";
+		} else if ($route == "/team") {
+			include_once __DIR__ . "/../views/team.php";
+		} else {
+			include_once __DIR__ . "/../views/home.php";
+		}
+		?>
 	</div>
 
 	<!-- Scroll Progress -->
@@ -130,7 +142,7 @@
 			<a href=""><i class="fa-brands fa-youtube fa-2xl iconFooter"></i></a>
 		</div>
 		<div id="siteLinksFooter" class="row justify-content-center" style="margin-top: 30px">
-			<a class="col-1 texteFooter" href= "/home">Home</a>
+			<a class="col-1 texteFooter" href="/home">Home</a>
 			<a class="col-1 texteFooter" href="/schedule">Schedule</a>
 			<a class="col-1 texteFooter" href="/bracket">Bracket</a>
 			<a class="col-1 texteFooter" href="/teams">Teams</a>
@@ -148,4 +160,5 @@
 	<script src="/../js/main.js"></script>
 
 </body>
+
 </html>

@@ -24,6 +24,12 @@ get('/admin', 'controllers/layout.php');
 // Bracket
 get('/bracket', 'controllers/layout.php');
 
+get('/teams', 'controllers/layout.php');
+
+get('/team', 'controllers/layout.php');
+
+get('/players', 'controllers/layout.php');
+
 
 
 // Dynamic routes
