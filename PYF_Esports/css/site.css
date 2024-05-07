@@ -1,0 +1,817 @@
+/* General */
+body {
+    background-color: rgb(5, 10, 48);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  header {
+    height: 100px;
+    margin-bottom: 0px;
+  }
+
+  footer {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 48px;
+    color: rgb(0, 203, 240);
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  #bodyContainer {
+    padding-top: 40px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  /* End of general */
+
+  /* Buttons */
+  .button-blue-action {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #7bebff 0, #00CBF0 100%);
+    border: 0;
+    border-radius: 10px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  .button-blue-action:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  }
+
+  .button-blue-action:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+
+  .button-blue-action:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+  /* End Buttons */
+
+  /* Layout */
+  .navbar, .navbar-brand {
+    height: 100px;
+  }
+
+  .navbar {
+    background-color: rgb(5, 10, 48);
+  }
+
+  #navbarOptions {
+    padding: 0px;
+    height: 100px;
+  }
+
+  .navbar-toggler, .navbar-collapse {
+    margin-right: 50px;
+  }
+
+  .nav-link {
+    color: white;
+    font-size: 14px;
+    position: relative;
+    transition: all 0.4s;
+  }
+
+  .nav-link:hover {
+    color: rgb(0, 203, 240);
+    cursor: pointer;
+  }
+
+  .nav-link::after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: rgb(0, 203, 240);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    opacity: 0;
+    transition: all 0.2s;
+    pointer-events: none;
+  }
+
+  .navbar .navbar-toggler[aria-expanded="true"] {
+    color: rgb(0, 203, 240)!important;
+  }
+
+  .navbar .navbar-toggler:focus{
+    color: rgb(5, 10, 48);
+  }
+
+  .custom-toggler.navbar-toggler {
+    border: 2px solid rgb(29, 35, 78);
+  }
+
+  .icon {
+    color: white;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+
+  .icon:hover {
+    color: rgb(0, 203, 240);
+    transition: color 0.5s ease;
+    cursor: pointer;
+  }
+
+  .fa-circle {
+    color: rgb(29, 35, 78);
+  }
+
+  .iconFooter {
+    transition: 500ms linear;
+    padding-top: 33px;
+    padding-bottom: 33px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  .iconFooter:hover {
+    color: rgb(0, 203, 240);
+    transition: color 0.5s ease;
+    cursor: pointer;
+
+    transform: scale(1.1);
+  }
+
+  .texteFooter {
+    color: white;
+    text-decoration: none;
+  }
+
+  .texteFooter:hover {
+    color: rgb(0, 203, 240);
+    transition: color 0.5s ease;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    #socials {
+      display: none;
+    }
+  }
+
+  .nav-link:hover::after,
+  .nav-link:focus::after {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 1399px) {
+    header {
+      margin-bottom: 50px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    #siteLinksFooter {
+      font-size: 12px;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .navbar-collapse {
+        background-color: rgb(5, 10, 48);
+        border-bottom: rgb(29, 35, 78);
+      }
+
+      .navbar-nav {
+        margin-top: 20px;
+      }
+
+      .nav-link {
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .nav-link:hover {
+        color: #00CBF0;
+      }
+
+      .navbar {
+        height: 108px;
+      }
+
+      .navbar-collapse {
+        margin-right: 0px;
+      }
+
+      #siteLinksFooter {
+        display: none;
+      }
+
+      @media screen and (max-width: 768px) {
+        .iconFooter {
+          margin: 0px;
+        }
+      }
+  }
+
+  @font-face {
+    font-family: 'unicons';
+    src: url('unicons.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @-webkit-keyframes border-transform {
+    0%,100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; }
+    14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; }
+    28% { border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%; }
+    42% { border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%; }
+    56% { border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%; }
+    70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; }
+    84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; }
+  }
+
+  .progress-wrap {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    display: block;
+    border-radius: 50px;
+    box-shadow: inset 0 0 0 2px rgba(255,255,255,0.2);
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+  }
+
+  .progress-wrap.active-progress {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .progress-wrap::after {
+    position: absolute;
+    font-family: 'unicons';
+    content: '\e84b';
+    text-align: center;
+    line-height: 50px;
+    font-size: 26px;
+    color: #ecedf3;
+    left: 0;
+    top: 0;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    display: block;
+    z-index: 1;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+  }
+
+  .progress-wrap:hover::after {
+    opacity: 0;
+  }
+
+  .progress-wrap::before {
+    position: absolute;
+    font-family: 'unicons';
+    content: '\e84b';
+    text-align: center;
+    line-height: 50px;
+    font-size: 26px;
+    opacity: 0;
+    background: #000;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    left: 0;
+    top: 0;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    display: block;
+    z-index: 2;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+  }
+
+  .progress-wrap:hover::before {
+    opacity: 1;
+  }
+
+  .progress-wrap svg path {
+    fill: none;
+  }
+
+  .progress-wrap svg.progress-circle path {
+    stroke: #ecedf3;
+    stroke-width: 4;
+    box-sizing: border-box;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+  }
+  /* End of Layout */
+
+  /* Home Page */
+  #homeTitle, #homeSubTitle {
+    transition: 500ms linear;
+    margin-bottom: 20px;
+  }
+
+  #textHome {
+    transition: 500ms linear;
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .buttonTitle {
+    transition: 500ms linear;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .homeButton {
+    transition: 500ms linear;
+  }
+
+  @media screen and (max-width: 1399px) {
+    h1 {
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    #textHome {
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    #homeImage1 {
+      width: 75%;
+      height: 75%;
+    }
+
+    #mainContainerLeft {
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    #textHome {
+      font-size: 12px;
+    }
+
+    #hiddenText {
+      display: none;
+    }
+
+    .buttonTitle {
+      font-size: 14px;
+    }
+  }
+
+  /* Schedule page */
+  #matchSchedule {
+    background-color: rgb(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 125px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  #date {
+    font-size: 32x;
+    font-weight: bold;
+  }
+
+  .infoSchedule {
+    font-size: 16px;
+    transition: 500ms linear;
+  }
+
+  #vs {
+    margin-bottom: 0px;
+    color: #00CBF0;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    transition: 500ms linear;
+  }
+
+  .teamScheduleName {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 500ms linear;
+  }
+
+  .teamScheduleName:hover {
+    color: #00CBF0;
+    cursor: pointer;
+  }
+
+  .logoTeams:hover {
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .infoSchedule {
+      font-size: 12px;
+    }
+
+    .teamScheduleName {
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    #vs {
+      margin-bottom: 0px;
+      color: #00CBF0;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .teamScheduleName {
+      display: none;
+    }
+  }
+  /* End of Schedule page */
+
+  /* Teams page */
+  #titleTeams {
+    margin-bottom: 30px;
+  }
+
+  .teamName {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0px;
+    text-align: left;
+    padding-left: 0px;
+    transition: 250ms linear;
+  }
+
+  .teamName:hover {
+    color: #00CBF0;
+    cursor: pointer;
+  }
+
+  .drop {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    .teamName {
+      padding-left: 40px;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .teamName {
+      font-size: 20px
+    }
+  }
+
+  .collapsible {
+    transition: 250ms linear;
+    background-color: rgb(255, 255, 255, 0.05);
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    height: 125px;
+    padding-right: 30px;
+  }
+
+  .active, .collapsible:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+  }
+
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: rgb(255, 255, 255, 0.05);
+  }
+
+  .collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+  }
+
+  .active:after {
+    content: "\2796"; /* Unicode character fors "minus" sign (-) */
+  }
+
+  .roster {
+    transition: 250ms linear;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .roster:hover {
+    color: #00CBF0;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .roster {
+      font-size: 18px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .roster {
+      text-align: left;
+    }
+  }
+  /* End of teams page */
+
+  /* Bracket page */
+  #bracketText {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  #winLose {
+    border-collapse:  collapse;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 500ms linear;
+  }
+
+  td, th {
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+  }
+
+  th {
+    background-color: #030821;
+  }
+
+  td {
+    background-color: #12173a;
+  }
+
+  .imgBracket {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (max-width: 1399px) {
+    .imgBracket {
+      width: 90%;
+      height: 90%;
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    #bracketText {
+      display: none;
+    }
+
+    .imgBracket {
+      display: none;
+    }
+
+    #winLose {
+      width: 100%;
+    }
+  }
+
+  .roundsBackground{
+    background-color: rgb(255, 255, 255, 0.05);
+    border: 1px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .scoreBracket {
+    background-color: rgb(0, 0, 0, 0.30);
+  }
+
+  .rounds {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .bracketMatch {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .nameTeamsBracket {
+    margin-bottom: 0px;
+    margin-right: 10px;
+  }
+
+  .teamNameBracket {
+    text-align: start;
+    transition: 250ms linear;
+  }
+
+  .teamNameBracket:hover {
+    color: #00CBF0;
+    cursor: pointer;
+  }
+
+  .dropdown-menu {
+    background-color: rgb(5, 10, 48);
+    border: 1px solid white;
+  }
+
+  .dropdown-item {
+    color: white;
+  }
+  /* End of bracket page */
+
+  /* Players standings */
+  #tableStandingsPlayers {
+    width: 100%;
+    line-height: 1.25;
+    border-collapse: collapse;
+  }
+
+  #stickyRank {
+    position: sticky;
+    left: 0;
+    text-align: center;
+    width: 35px;
+    min-width: 35px;
+    border: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: #12173a;
+  }
+
+  #stickyLogo {
+    position: sticky;
+    left: 34px;
+    width: 67px;
+    min-width: 67px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-bottom: 0px;
+    background-color: #12173a;
+  }
+
+
+  #stickyPlayer {
+    position: sticky;
+    left: 100px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    margin-bottom: 0px;
+  }
+
+  #stickyPlayer:hover {
+    color:rgb(0, 203, 240);
+    cursor: pointer;
+    transition: 250ms linear;
+  }
+
+  #legend {
+    margin-bottom: 50px;
+  }
+
+  #omen {
+    /*display: block;
+    margin-left: auto;
+    margin-right: auto;*/
+  }
+
+  @media screen and (max-width: 991px) {
+    #omen {
+      display: none;
+    }
+  }
+
+  .podium {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .podium__item {
+    width: 200px;
+  }
+
+  .podium__rank {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    color: #fff;
+  }
+
+  .podium__city {
+    text-align: center;
+    padding: 0 .5rem;
+    font-weight: bold;
+  }
+
+  .podium__number {
+    width: 27px;
+    height: 75px;
+  }
+
+  .podium .first {
+    min-height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid black;
+  }
+
+  .podium .second {
+    min-height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid black;
+  }
+
+  .podium .third {
+    min-height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid black;
+  }
+
+  .first {
+    color: #FFD700;
+  }
+
+  .second {
+    color: #C0C0C0;
+  }
+
+  .third {
+    color: #CD7F32;
+  }
+  /* End of Players standing*/
