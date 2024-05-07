@@ -1,3 +1,4 @@
+-- Active: 1715053854725@@cocktailwizardbd.mysql.database.azure.com@3306@pyf_esports
 
 DROP TABLE IF EXISTS Account CASCADE;
 DROP TABLE IF EXISTS EventPlayer CASCADE;
@@ -54,6 +55,7 @@ CREATE TABLE Event(
     score_team2 INT,
     id_winner INT,
     id_round INT,
+    valoMatchId VARCHAR(100),
     FOREIGN KEY (id_team1) REFERENCES Team(id_team),
     FOREIGN KEY (id_team2) REFERENCES Team(id_team),
     FOREIGN KEY (id_winner) REFERENCES Team(id_team),
