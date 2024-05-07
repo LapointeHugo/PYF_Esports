@@ -57,7 +57,7 @@
 		<div id="navbarOptions" class="container">
 			<nav class="navbar navbar-expand-lg navbar-light fixed-top">
 				<!-- Logo -->
-				<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+				<a class="navbar-brand" href="/home">
 					<img src="/images/Logo.png" alt="PYF_Logo" class="d-inline-block align-top h-logo">
 				</a>
 
@@ -70,7 +70,7 @@
 				<div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarNav">
 					<ul class="navbar-nav">
 						<li class="nav-item mx-3">
-							<a class="nav-link" style="color: white" href="/home">HOME</a>
+							<a class="nav-link" style="color: white" href="/auth">LOGIN</a>
 						</li>
 						<li class="nav-item mx-3">
 							<a class="nav-link" style="color: white" href="/schedule">SCHEDULE</a>
@@ -154,7 +154,7 @@
 
 	<script src="/../lib/jquery/dist/jquery.min.js"></script>
 	<script src="/../lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="https://kit.fontawesome.com/63463ff979.js" crossorigin="anonymous"></script>@*Fontawesome*@
+	<script src="https://kit.fontawesome.com/63463ff979.js" crossorigin="anonymous"></script>
 	<script src="/../lib/jquery-validation/dist/jquery.validate.js"></script>
 	<script src="/../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
 	<script src="/../js/site.js"></script>
