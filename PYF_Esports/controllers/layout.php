@@ -81,17 +81,20 @@
 					<ul class="navbar-nav">
 						<?php
 							if(isset($_SESSION['username'])) {
+
+								echo '<li class="nav-item mx-3 dropdown">
+								<a class="nav-link" href="#" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="color: white">ADMIN</a>
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+										<li><a class="dropdown-item" href="/admin">CONTROL PANEL</a></li>
+										<li><a class="dropdown-item" id="logout">LOGOUT</a></li>
+									</ul>
+								</li>';
+							} else{
 								echo '<li class="nav-item mx-3">
-									<a class="nav-link" style="color: white" id="logout">LOGOUT</a>
-								</li>
-								<li class="nav-item mx-3">
-									<a class="nav-link" style="color: white" href="/auth">ADMIN</a>
+									<a class="nav-link" style="color: white" href="/home">HOME</a>
 								</li>';
 							}
 						?>
-						<li class="nav-item mx-3">
-							<a class="nav-link" style="color: white" href="/home">HOME</a>
-						</li>
 						<li class="nav-item mx-3">
 							<a class="nav-link" style="color: white" href="/schedule">SCHEDULE</a>
 						</li>
