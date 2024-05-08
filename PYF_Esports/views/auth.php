@@ -14,18 +14,20 @@
         <h2>Login</h2>
         <p>Welcome!</p>
         <br>
-        <div class="group">
-            <input type="text" required>
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>Username</label>
-        </div>
-        <div class="group">
-            <input type="text" required>
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>Password</label>
-        </div>
-        <a class="button-blue-action">Sign In</a>
+        <form id="form-login">
+            <div class="group">
+                <input name="username" id="admin-username" type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label for="username">Username</label>
+            </div>
+            <div class="group">
+                <input name="password" id="admin-pass" type="password" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label for="password">Password</label>
+            </div>
+            <button id="button-signin" type="submit" class="button-blue-action">Log In</button>
+        </form>
     </div>
 </div>

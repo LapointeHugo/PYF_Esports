@@ -3,6 +3,10 @@ body {
   background-color: rgb(5, 10, 48);
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 header {
@@ -348,6 +352,7 @@ a {
   background: #000;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
   left: 0;
   top: 0;
   height: 50px;

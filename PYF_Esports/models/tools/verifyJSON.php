@@ -6,6 +6,6 @@ function verifyJSON($json, $paramName) {
         die('Missing ' . $paramName);
     }
     else {
-        return $json[$paramName];
+        return trim($json[$paramName]);
     }
 }

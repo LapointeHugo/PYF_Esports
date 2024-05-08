@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['username']) && $route == "/admin"){
+        header('Location: /auth');
+        exit();
+    } else if(isset($_SESSION['username']) && $route == "/auth"){
+		header('Location: /admin');
+		exit();
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,8 +79,18 @@
 				<!-- Navbar Content -->
 				<div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarNav">
 					<ul class="navbar-nav">
+						<?php
+							if(isset($_SESSION['username'])) {
+								echo '<li class="nav-item mx-3">
+									<a class="nav-link" style="color: white" id="logout">LOGOUT</a>
+								</li>
+								<li class="nav-item mx-3">
+									<a class="nav-link" style="color: white" href="/auth">ADMIN</a>
+								</li>';
+							}
+						?>
 						<li class="nav-item mx-3">
-							<a class="nav-link" style="color: white" href="/auth">LOGIN</a>
+							<a class="nav-link" style="color: white" href="/home">HOME</a>
 						</li>
 						<li class="nav-item mx-3">
 							<a class="nav-link" style="color: white" href="/schedule">SCHEDULE</a>
@@ -157,8 +177,8 @@
 	<script src="https://kit.fontawesome.com/63463ff979.js" crossorigin="anonymous"></script>
 	<script src="/../lib/jquery-validation/dist/jquery.validate.js"></script>
 	<script src="/../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
-	<!-- <script src="/../js/site.js"></script>
-	<script src="/../js/main.js"></script> -->
+	<script src="/../js/site.js"></script>
+	<!--<script src="/../js/main.js"></script> -->
 
 </body>
 

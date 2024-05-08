@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: application/json');
 require_once __DIR__ . '/tools/databaseConn.php';
 
 /**
@@ -56,12 +57,14 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     }
 
     if($success && empty($errors)){
-        header('Location: /admin');
+        echo json_encode(['success' => true]);
     } else {
+        http_response_code(400);
         echo json_encode($errors);
     }
 
 } elseif ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
     $_SESSION = [];
     session_destroy();
+    echo json_encode(['success' => true]);
 }
