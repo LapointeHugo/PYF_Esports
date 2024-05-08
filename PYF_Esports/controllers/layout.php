@@ -181,7 +181,7 @@
 	<?php
 		if($route == "/auth") {
 			echo '<script src="/../js/auth.js"></script>';
-		} else if(isset($_SESSION['username']) {
+		} else if(isset($_SESSION['username'])) {
 			echo '<script src="/../js/admin.js"></script>';
 		}
 	?>
