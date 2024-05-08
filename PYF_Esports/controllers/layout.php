@@ -178,6 +178,13 @@
 	<script src="/../lib/jquery-validation/dist/jquery.validate.js"></script>
 	<script src="/../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
 	<script src="/../js/site.js"></script>
+	<?php
+		if($route == "/auth") {
+			echo '<script src="/../js/auth.js"></script>';
+		} else if($route == "/admin") {
+			echo '<script src="/../js/admin.js"></script>';
+		}
+	?>
 	<!--<script src="/../js/main.js"></script> -->
 
 </body>
