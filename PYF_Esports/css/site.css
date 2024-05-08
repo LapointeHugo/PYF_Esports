@@ -437,6 +437,14 @@ a {
   transition: 500ms linear;
 }
 
+iframe {
+  width: 450px;
+  height: 300px;
+  border: 2px solid rgb(29, 35, 78);
+}
+
+
+
 @media screen and (max-width: 1399px) {
   h1 {
     text-align: center;
@@ -894,6 +902,15 @@ td {
 /* End of Players standing*/
 
 /* Login */
+.centerLoginRight {
+  text-align: start;
+}
+
+/* @media screen and (max-width: 991px) {
+  .centerLoginRight {
+    text-align: center;
+  }
+} */
 
 .group {
   position: relative;

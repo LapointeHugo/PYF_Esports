@@ -9,7 +9,7 @@
         </p>
 
         <div class="row justify-content-center homeButton" style="text-align: center">
-            <div class="col-5 d-flex flex-column justify-content-center align-items-center upco">
+            <div class="d-none col-5 d-flex flex-column justify-content-center align-items-center upco">
                 <p class="buttonTitle">Upcoming matches</p>
                 <i class="fa-solid fa-down-long" style="margin-bottom: 16px"></i>
                 <a class="button-blue-action" href="/schedule">Schedule</a>
@@ -17,8 +17,6 @@
             <div class="col-7 d-flex flex-column justify-content-center align-items-center homeButton">
                 <iframe
                     src="https://player.twitch.tv/?channel=pyfesports&parent=<?php echo $_SERVER['HTTP_HOST']; ?>"
-                    height="200"
-                    width="375"
                     frameborder="0"
                     scrolling="no"
                     allowfullscreen="true">
