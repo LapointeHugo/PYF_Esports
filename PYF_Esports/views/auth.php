@@ -6,8 +6,8 @@
             Meanwhile, if you're an admin, please proceed with your credentials.</p>
             <br>
         <div class="row justify-content-around">
-            <img src="/images/Cypher.webp" class="col-5">
-            <img src="/images/Kj.webp" class="col-5">
+            <img src="/../images/Cypher.webp" class="col-5">
+            <img src="/../images/Kj.webp" class="col-5">
         </div>
     </div>
     <div class="col-5">
