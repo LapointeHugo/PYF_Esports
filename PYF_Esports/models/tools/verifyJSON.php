@@ -6,6 +6,11 @@ function verifyJSON($json, $paramName) {
         die('Missing ' . $paramName);
     }
     else {
-        return trim($json[$paramName]);
+        if(is_string($json[$paramName])) {
+            return trim($json[$paramName]);
+        }
+        else {
+            return $json[$paramName];
+        }
     }
 }

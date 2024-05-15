@@ -10,6 +10,7 @@
  *     players: [
  *        {
  *           "Pname": "player name",
+ *           "valoNameTag" : "player valorant name tag",
  *           "role": "1 or 0"(1 for main, 0 for sub)
  *        }
  *     ]
@@ -22,7 +23,6 @@ require_once __DIR__ . '/tools/verifyJSON.php';
 
 //verifyAuth();
 
-// Error accumulator
 $nbPlayersMain = 0;
 
 // Get the JSON body
@@ -59,14 +59,15 @@ try {
     // Add the players
     foreach ($players as $player) {
         $playerName = verifyJSON($player, 'Pname');
+        $nameTag = verifyJSON($player, 'valoNameTag');
         $playerRole = verifyJSON($player, 'role') == 1 || verifyJSON($player, 'role') == 0 ? verifyJSON($player, 'role') : 0;
 
         if ($playerRole == 1) {
             $nbPlayersMain++;
         }
 
-        $query = $DB->prepare('CALL addPlayer(?, ?, ?)');
-        $query->bind_param('sis', $playerName, $playerRole, $teamId);
+        $query = $DB->prepare('CALL addPlayer(?, ?, ?,?)');
+        $query->bind_param('siss', $playerName, $playerRole, $teamId, $nameTag);
         $query->execute();
         $query->close();
     }

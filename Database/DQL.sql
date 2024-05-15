@@ -2,7 +2,7 @@
 
 
 DROP TABLE IF EXISTS Account CASCADE;
-DROP TABLE IF EXISTS EventPlayer CASCADE;
+DROP TABLE IF EXISTS MatchPlayer CASCADE;
 DROP TABLE IF EXISTS ValoMatch CASCADE;
 DROP TABLE IF EXISTS Event CASCADE;
 DROP TABLE IF EXISTS Round CASCADE;
@@ -36,6 +36,7 @@ CREATE TABLE Player(
 
 CREATE TABLE Tournament(
     id_tournament INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100),
     date_start DATE,
     id_winner INT,
     FOREIGN KEY (id_winner) REFERENCES Team(id_team)
@@ -57,6 +58,7 @@ CREATE TABLE Event(
     scoreB INT NOT NULL DEFAULT 0,
     id_teamA INT,
     id_teamB INT,
+    matchDateTime DATETIME,
     FOREIGN KEY (id_round) REFERENCES Round(id_round),
     FOREIGN KEY (id_winner) REFERENCES Team(id_team),
     FOREIGN KEY (id_teamA) REFERENCES Team(id_team),
@@ -71,12 +73,11 @@ CREATE TABLE ValoMatch(
     roundWinDefA INT,
     nbRound INT,
     map VARCHAR(100),
-    matchDateTime DATETIME,
     FOREIGN KEY (id_event) REFERENCES Event(id_event),
     FOREIGN KEY (id_winner) REFERENCES Team(id_team)
 );
 
-CREATE TABLE EventPlayer(
+CREATE TABLE MatchPlayer(
     id_match INT,
     id_player INT,
     averageCombatScore INT,

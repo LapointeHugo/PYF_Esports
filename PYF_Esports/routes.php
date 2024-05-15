@@ -40,7 +40,11 @@ post('/auth', 'models/authentification.php');
 delete('/auth', 'models/authentification.php');
 
 // Adding a team
-post('/team', 'models/addTeam.php');
+post('/api/team', 'models/addTeam.php');
+
+get('/api/schedule', 'models/getSchedule.php');
+
+post('/api/tournament', 'models/addTournament.php');
 
 
 // Not found
