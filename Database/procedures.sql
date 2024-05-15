@@ -20,7 +20,7 @@ END//
 DROP PROCEDURE IF EXISTS GetSchedule;
 CREATE PROCEDURE GetSchedule()
 BEGIN
-    SELECT E.matchDateTime, R.name, T1.name AS TeamA, T2.name AS TeamB, T1.logo AS TeamALogo, T2.logo AS TeamBLogo
+    SELECT E.matchDateTime, R.type, T1.name AS TeamA, T2.name AS TeamB, T1.logo AS TeamALogo, T2.logo AS TeamBLogo
     FROM Event E
     JOIN Round R ON E.id_round = R.id_round
     JOIN Team T1 ON E.id_teamA = T1.id_team
@@ -28,6 +28,8 @@ BEGIN
     WHERE E.matchDateTime > NOW()
     ORDER BY E.matchDateTime ASC;
 END//
+
+Call GetSchedule();
 
 DROP PROCEDURE IF EXISTS CreateTournament;
 CREATE PROCEDURE CreateTournament(IN tournamentDate DATE, IN name VARCHAR(100))

@@ -1,13 +1,13 @@
 <?php
 
-function getDataSchedule(){
+function getTeams() {
     require_once __DIR__ . '/tools/databaseConn.php';
-    require_once __DIR__ . '/classes/eventSchedule.php';
     require_once __DIR__ . '/classes/team.php';
+    require_once __DIR__ . '/classes/player.php';
 
     $DB = connectToDatabase();
 
-    $events = array();
+    $teams = array();
 
     try {
         $query = $DB->prepare('CALL getSchedule()');

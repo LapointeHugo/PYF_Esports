@@ -46,6 +46,8 @@ get('/api/schedule', 'models/getSchedule.php');
 
 post('/api/tournament', 'models/addTournament.php');
 
+get('/api/teams', 'models/getTeams.php');
+
 
 // Not found
 any('/404', 'views/404.php');
