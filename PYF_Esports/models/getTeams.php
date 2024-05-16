@@ -10,21 +10,25 @@ function getTeams() {
     $teams = array();
 
     try {
-        $query = $DB->prepare('CALL getSchedule()');
+        $query = $DB->prepare('CALL GetTeams()');
         $query->execute();
         $result = $query->get_result();
         $query->close();
 
+        $currentTeamId = null;
+
         while ($row = $result->fetch_assoc()) {
-            $team1 = new Team($row['TeamA'], $row['TeamALogo']);
-            $team2 = new Team($row['TeamB'], $row['TeamBLogo']);
-            $date = date('F j', strtotime($row['matchDateTime']));
-            $time = date('H:i', strtotime($row['matchDateTime']));
-            $events[$date][] = new EventSchedule($date, $time, $team1, $team2, $row['type']);
+            
+            if ($currentTeamId != $row['id_team']) {
+                $currentTeamId = $row['id_team'];
+                $team = new Team($row['name'], $row['logo']);
+                $teams[$currentTeamId] = $team;
+            }
+
+            $teams[$currentTeamId]->addPlayer(new Player($row['pName'], $row['main_roster']));
         }
 
-        return $events;
-
+        return $teams;
     } catch (Exception $e) {
         throw $e;
     }

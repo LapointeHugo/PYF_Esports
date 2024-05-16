@@ -29,7 +29,16 @@ BEGIN
     ORDER BY E.matchDateTime ASC;
 END//
 
-Call GetSchedule();
+DROP PROCEDURE IF EXISTS GetTeams;
+CREATE PROCEDURE GetTeams()
+BEGIN
+    SELECT T.*, P.name AS pName , P.main_roster
+    FROM Team T
+    LEFT JOIN Player P ON T.id_team = P.id_team
+    ORDER BY T.id_team ASC;
+END//
+
+Call GetTeams();
 
 DROP PROCEDURE IF EXISTS CreateTournament;
 CREATE PROCEDURE CreateTournament(IN tournamentDate DATE, IN name VARCHAR(100))

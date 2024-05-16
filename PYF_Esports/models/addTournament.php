@@ -14,7 +14,7 @@
  *          "bestOf": "best of",
  *          "Event" : [
  *              {
- *                 "Edate": "dateTime of the event",
+ *                 "Edate": "2024-12-13 12:00:00",
  *                 "Team1": "team name",
  *                 "Team2": "team name",
  *          ]
