@@ -1,5 +1,5 @@
 
 <!DOCTYPE html>
 <html>
-    <h1>admin</h1>
+    <h1>Control Panel</h1>
 </html>
