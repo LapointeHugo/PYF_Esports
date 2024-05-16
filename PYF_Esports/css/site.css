@@ -90,6 +90,54 @@ a {
   transform: translateY(2px);
 }
 
+.button-red-action {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #F56638 0, #ef1e17 100%);
+  border: 0;
+  border-radius: 10px;
+  box-shadow: rgba(86, 46, 46, .4) 0 2px 4px, rgba(118, 52, 48, .3) 0 7px 13px -3px, rgba(106, 47, 22, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Montserrat", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .35s, transform .35s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.button-red-action:focus {
+  box-shadow: #8c311c 0 0 0 1.5px inset, rgba(86, 46, 46, .4) 0 2px 4px, rgba(118, 52, 48, .3) 0 7px 13px -3px, #a04e33 0 -3px 0 inset;
+}
+
+.button-red-action:hover {
+  box-shadow: rgba(86, 46, 46, .4) 0 4px 8px, rgba(106, 47, 22, .5) 0 7px 13px -3px, #6c231e 0 -3px 0 inset;
+  color: #fcdede;
+  transform: translateY(-2px);
+}
+
+.button-red-action:active {
+  box-shadow: #ad2917 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
 /* End Buttons */
 
 /* Layout */
@@ -1036,4 +1084,10 @@ input:focus~.highlight {
     width: 0;
     background: transparent;
   }
+}
+
+/* Admin Control Panel */
+.existingTeam {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
